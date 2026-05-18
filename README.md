@@ -2,6 +2,10 @@
 
 AI-powered travel planning web application for destinations across India. Generate personalized trip plans with real hotel data, accurate cost breakdowns, and day-wise itineraries — all powered by a local LLM.
 
+## Demo 
+
+https://drive.google.com/file/d/1AN02h5V8d63YZznRjxDdMI7yHXLzSNow/view?usp=sharing
+
 ## Tech Stack
 
 | Layer | Technology |
