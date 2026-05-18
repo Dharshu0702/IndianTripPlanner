@@ -1,0 +1,206 @@
+/* ── Results Page ── */
+.results-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.results-header h1 { font-size: 2.2rem; margin-bottom: 16px; }
+
+.trip-summary-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.dest-highlight { color: var(--accent-light); font-weight: 600; }
+.summary-divider { color: var(--border); }
+
+/* Plans Grid */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.plan-card {
+  padding: 0;
+  overflow: hidden;
+  transition: all var(--transition-slow);
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.plan-card-header {
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+.plan-icon { font-size: 2rem; }
+.plan-card-header h2 {
+  flex: 1;
+  font-size: 1.3rem;
+  color: white;
+}
+.plan-total {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.plan-card-body { padding: 24px 28px; }
+
+.plan-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+.plan-detail-row svg { color: var(--primary-light); font-size: 1.1rem; flex-shrink: 0; }
+.detail-label { color: var(--text-muted); width: 110px; flex-shrink: 0; }
+.detail-value { color: var(--text-primary); flex: 1; }
+
+.cab-notice {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--accent-light);
+}
+
+.plan-places { margin-top: 16px; }
+.plan-places h4 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+}
+.places-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.place-tag {
+  padding: 4px 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.expand-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: transparent;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  color: var(--primary-light);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+.expand-toggle:hover { background: rgba(79, 70, 229, 0.05); border-color: var(--primary); }
+.expand-toggle svg { transition: transform var(--transition-base); }
+.expand-toggle svg.rotated { transform: rotate(180deg); }
+
+/* Itinerary Timeline */
+.itinerary-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.itinerary-day {
+  display: flex;
+  gap: 16px;
+}
+.day-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+}
+.day-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--primary-glow);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.day-line {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  min-height: 20px;
+}
+.day-content {
+  padding-bottom: 20px;
+  flex: 1;
+}
+.day-content h5 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--primary-light);
+  margin-bottom: 8px;
+}
+.day-content ul {
+  list-style: none;
+  padding: 0;
+}
+.day-content li {
+  padding: 3px 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding-left: 16px;
+  position: relative;
+}
+.day-content li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.plan-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.plan-actions .btn { flex: 1; min-width: 120px; }
+.plan-actions .btn-sm { flex: 0; min-width: auto; }
+
+@media (max-width: 768px) {
+  .plans-grid { grid-template-columns: 1fr; }
+  .trip-summary-bar { font-size: 0.82rem; gap: 8px; }
+  .results-header h1 { font-size: 1.6rem; }
+}

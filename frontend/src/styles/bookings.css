@@ -1,0 +1,96 @@
+/* ── Bookings Page ── */
+.bookings-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.bookings-header h1 { font-size: 2rem; margin-bottom: 6px; }
+.bookings-header p { color: var(--text-muted); }
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+.empty-icon { font-size: 4rem; margin-bottom: 16px; }
+.empty-state h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.empty-state p { color: var(--text-muted); }
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.booking-card-left { flex: 1; }
+
+.booking-dest {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.booking-dest h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.1rem;
+}
+
+.booking-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.booking-cost {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.cost-amount {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--success-light);
+}
+
+.admin-notes {
+  padding: 8px 12px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.booking-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.booking-card-right {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.pending-note { color: var(--warning-light); font-size: 0.88rem; }
+.rejected-note { color: var(--error-light); font-size: 0.88rem; }
+
+@media (max-width: 768px) {
+  .booking-card { flex-direction: column; align-items: flex-start; }
+  .booking-meta { flex-wrap: wrap; gap: 8px; }
+}
