@@ -1,4 +1,4 @@
-# 🇮🇳 India Smart Trip Planner
+# India Smart Trip Planner
 
 AI-powered travel planning web application for destinations across India. Generate personalized trip plans with real hotel data, accurate cost breakdowns, and day-wise itineraries — all powered by a local LLM.
 
